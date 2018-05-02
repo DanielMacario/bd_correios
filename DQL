@@ -1,0 +1,4 @@
+select l.nome as "Logradouro", b.nome as "Bairro", c.nome as "Cidade", e.sigla as "UF", l.cep_logradouro as "CEP Logradouro", 
+       c.cep_cidade as "CEP Cidade" from estados as e left join cidades as c on c.sigla_estado = e.sigla left join bairros as b on 
+       b.id_cidade = c.id left join logradouros as l on l.id_bairro = b.id where l.nome like '%%' or l.cep_logradouro like '%%' or 
+       c.cep_cidade like '%%' or c.nome like '%%'; 
