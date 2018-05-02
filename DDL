@@ -1,0 +1,14 @@
+create schema correios; 
+use correios;
+
+create table estados( sigla varchar(2) primary key not null, nome varchar (50) not null); 
+create table cidades( id bigint primary key auto_increment, nome varchar (50) not null, cep_cidade varchar(9));
+create table bairros( id bigint primary key auto_increment, nome varchar (50) not null);
+create table logradouros( id bigint primary key auto_increment, nome varchar(100) not null, cep_logradouro varchar(9));
+
+alter table cidades add column sigla_estado varchar(2) not null;
+alter table cidades add constraint fk_sigla_estado foreign key (sigla_estado) references estados (sigla) on delete cascade ;
+alter table bairros add column id_cidade bigint not null;
+alter table bairros add constraint fk_id_cidade  foreign key (id_cidade) references cidades (id) on delete cascade;
+alter table logradouros add column id_bairro bigint not null ;
+alter table logradouros add constraint fk_id_bairro foreign key (id_bairro) references bairros(id) on delete cascade;
