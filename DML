@@ -1,0 +1,21 @@
+insert into estados (sigla, nome) values ( 'BA' , 'Bahia');
+insert into estados (sigla, nome) values ( 'MG' , 'Minas Gerais');
+
+insert into cidades (nome, cep_cidade, sigla_estado) values ('Itapetinga','45700-000', 'BA');
+insert into cidades (nome, cep_cidade, sigla_estado) values ('Vitoria da Conquista','', 'BA');
+insert into cidades (nome, cep_cidade, sigla_estado) values ('Belo Horizonte','', 'MG');
+
+insert into bairros (nome, id_cidade) values ('Cadeias',2);
+insert into bairros (nome, id_cidade) values ('Centro',2);
+insert into bairros (nome, id_cidade) values ('Boa Vista',2);
+insert into bairros (nome, id_cidade) values ('Recreio',2);
+insert into bairros (nome, id_cidade) values ('Jardim Leblon',3);
+
+insert into logradouros (nome, cep_logradouro,id_bairro) values ('Avenida Luis Eduardo','45028-440',1 );
+insert into logradouros (nome, cep_logradouro,id_bairro) values ('Avenida Luis Eduardo','45026-000',3 );
+insert into logradouros (nome, cep_logradouro,id_bairro) values ('Avenida Luis Eduardo','45020-282',4 );
+insert into logradouros (nome, cep_logradouro,id_bairro) values ('Avenida Ascendino Melo','45000-420',2 );
+insert into logradouros (nome, cep_logradouro,id_bairro) values ('Avenida Ascendino Melo','45020-740',4 );
+insert into logradouros (nome, cep_logradouro,id_bairro) values ('Travessa Lauro de Freitas','45000-285',2 );
+insert into logradouros (nome, cep_logradouro,id_bairro) values ('Rua Manoel Januário de Andrade','45020-540',4 );
+insert into logradouros (nome, cep_logradouro,id_bairro) values ('Rua Vitória da Conquista ','31540-384',5);
